@@ -4,7 +4,7 @@ import glob
 ori='/mnt/d/UCL_project/data/'
 os.chdir(ori)
 protocal='Stroke_Study_v1v2'
-os.chdir(protocal)
+os.chdir(protocol)
 
 # Forloop for each patient
 # NODDI fitting (https://github.com/daducci/AMICO/wiki/Fitting-the-NODDI-model)
@@ -13,7 +13,7 @@ for variable in glob.glob("Patient*"):
  os.chdir(ori)
  print(subject)
  amico.core.setup()
- ae = amico.Evaluation(protocal, subject)
+ ae = amico.Evaluation(protocol, subject)
  ae.load_data(dwi_filename = "NODDI_DWI.img", scheme_filename = "NODDI_DWI.scheme", mask_filename = "brain_mask.img", b0_thr = 5)
  ae.set_model("NODDI")
  ae.generate_kernels()
