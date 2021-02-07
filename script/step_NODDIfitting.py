@@ -3,7 +3,7 @@ import os
 import glob
 ori='/mnt/d/UCL_project/data/'
 os.chdir(ori)
-protocal='Stroke_Study_v1v2'
+protocol='Stroke_Study_v1v2'
 os.chdir(protocol)
 
 # Forloop for each patient
@@ -20,5 +20,5 @@ for variable in glob.glob("Patient*"):
  ae.load_kernels()
  ae.fit()
  ae.save_results()
- os.chdir(protocal)
+ os.chdir(protocol)
 
