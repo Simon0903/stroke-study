@@ -15,8 +15,8 @@ from scipy.ndimage.filters import gaussian_filter
 
 ori='/mnt/d/UCL_project/data/'
 os.chdir(ori)
-protocal='Stroke_Study_v1v2'
-os.chdir(protocal)
+protocol='Stroke_Study_v1v2'
+os.chdir(protocol)
 
 # Forloop for each patient
 # WMTI fitting (https://dipy.org/documentation/1.3.0./examples_built/reconst_dki_micro/#example-reconst-dki-micro)
@@ -90,4 +90,4 @@ for subject in glob.glob("Patient0*"):
     shutil.move(fname, './WMTI')
 
  os.chdir(ori)   
- os.chdir(protocal)
+ os.chdir(protocol)
