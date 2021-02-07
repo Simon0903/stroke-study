@@ -70,4 +70,4 @@ for subject in glob.glob("Patient0*"):
     shutil.move(fname, './DKI')
     
  os.chdir(ori)   
- os.chdir(protocal)
+ os.chdir(protocol)
